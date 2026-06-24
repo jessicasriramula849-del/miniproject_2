@@ -2,13 +2,10 @@ import streamlit as st
 import pandas as pd
 import duckdb
 
-import sys
-import subprocess
 
 try:
     from streamlit_option_menu import option_menu
 except ModuleNotFoundError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "streamlit-option-menu"])
     from streamlit_option_menu import option_menu
 
 conn = duckdb.connect(database=":memory:")
@@ -44,7 +41,7 @@ if selected == "Queries":
     if one == "Query 1: All successfull bookings":
         st.write("Here we can see all the successfull bookings for each customer.")
 
-        excel_file = r"C:/Users/pc/Desktop/miniproject2/OLA_dataset.xlsx"
+        excel_file = "OLA_dataset.xlsx"
 
         df = pd.read_excel(excel_file)
 
@@ -63,7 +60,7 @@ if selected == "Queries":
     if one == "Query 2: Average ride distance for each vehicle type":
         st.write("Here we can see the average ride distance for each vehicle type.")
 
-        excel_file = r"C:/Users/pc/Desktop/miniproject2/OLA_dataset.xlsx"
+        excel_file = "OLA_dataset.xlsx"
 
         df = pd.read_excel(excel_file)
 
@@ -81,7 +78,7 @@ if selected == "Queries":
     if one == "Query 3: Total number of cancelled rides by customers":
         st.write("Here we can see the total number of cancelled rides by each customer which is a total of 10499.")
 
-        excel_file = r"C:/Users/pc/Desktop/miniproject2/OLA_dataset.xlsx"
+        excel_file = "OLA_dataset.xlsx"
 
         df = pd.read_excel(excel_file)
 
@@ -95,7 +92,7 @@ if selected == "Queries":
     if one == "Query 4: Top 5 customers who booked the highest number of rides":
         st.write("Here we can see the top 5 customers who booked the highest number of rides.")
 
-        excel_file = r"C:/Users/pc/Desktop/miniproject2/OLA_dataset.xlsx"
+        excel_file = "OLA_dataset.xlsx"
 
         df = pd.read_excel(excel_file)
 
@@ -113,7 +110,7 @@ if selected == "Queries":
     if one == "Query 5: Number of rides cancelled by drivers due to personal and car-related issues":
         st.write("Here we can see the number of rides cancelled by drivers due to personal and car-related issues.")
 
-        excel_file = r"C:/Users/pc/Desktop/miniproject2/OLA_dataset.xlsx"
+        excel_file = "OLA_dataset.xlsx"
 
         df = pd.read_excel(excel_file)
 
@@ -127,7 +124,7 @@ if selected == "Queries":
     if one == "Query 6: Maximum and minimum driver ratings for Prime Sedan bookings":
         st.write("Here we can see the maximum and minimum driver ratings for the Prime Sedan car bookings.")
 
-        excel_file = r"C:/Users/pc/Desktop/miniproject2/OLA_dataset.xlsx"
+        excel_file = "OLA_dataset.xlsx"
 
         df = pd.read_excel(excel_file)
 
@@ -141,7 +138,7 @@ if selected == "Queries":
     if one == "Query 7: All rides where payment was made using UPI":
         st.write("Here we can see all the rides where the payment made by the customer was UPI.")
 
-        excel_file = r"C:/Users/pc/Desktop/miniproject2/OLA_dataset.xlsx"
+        excel_file = "OLA_dataset.xlsx"
 
         df = pd.read_excel(excel_file)
 
@@ -159,7 +156,7 @@ if selected == "Queries":
     if one == "Query 8: Average customer rating per vehicle type":
         st.write("Here we can see all the average customer ratings for each vehicle type.")
 
-        excel_file = r"C:/Users/pc/Desktop/miniproject2/OLA_dataset.xlsx"
+        excel_file = "OLA_dataset.xlsx"
 
         df = pd.read_excel(excel_file)
 
@@ -177,7 +174,7 @@ if selected == "Queries":
     if one == "Query 9: The total booking value of rides completed successfully":
         st.write("Here we can see the total booking value of the rides that were completed successfully.")
 
-        excel_file = r"C:/Users/pc/Desktop/miniproject2/OLA_dataset.xlsx"
+        excel_file = "OLA_dataset.xlsx"
 
         df = pd.read_excel(excel_file)
 
@@ -191,7 +188,7 @@ if selected == "Queries":
     if one == "Query 10: All incomplete rides along with the reason":
         st.write("Here we can see all the incomplete rides along with the specific reasons.")
 
-        excel_file = r"C:/Users/pc/Desktop/miniproject2/OLA_dataset.xlsx"
+        excel_file = "OLA_dataset.xlsx"
 
         df = pd.read_excel(excel_file)
 
